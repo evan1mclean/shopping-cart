@@ -6,12 +6,12 @@ import ShoppingCart from "./Components/Shopping Cart/ShoppingCart";
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <div className="App h-screen flex flex-col bg-gradient-to-tr from-sky-200">
       <BrowserRouter>
+        <Header />
         <Routes>
-          <Route path="/" element={<Home />}/>
-          <Route path="/products" element={<Products />}/>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
         </Routes>
       </BrowserRouter>
       <ShoppingCart />
