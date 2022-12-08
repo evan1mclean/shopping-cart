@@ -4,7 +4,7 @@ import shopping from "../images/shopping.jpg";
 function Home() {
   return (
     <div
-      className="grow flex lg:justify-between lg:items-center md:items-center w-full lg:px-24 px-4 py-10" 
+      className="grow flex lg:justify-between lg:items-center md:items-center w-full lg:px-24 px-10 py-10" 
     >
       <div className="lg:h-96 lg:w-1/2 flex flex-col lg:justify-between md:justify-between gap-7">
         <h1 className="lg:text-5xl md:text-5xl text-3xl font-bold lg:text-left text-center">
