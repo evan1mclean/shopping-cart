@@ -6,7 +6,7 @@ import ShoppingCart from "./Components/Shopping Cart/ShoppingCart";
 
 function App() {
   return (
-    <div className="App h-screen flex flex-col bg-gradient-to-tr from-sky-200">
+    <div className="App h-screen flex flex-col bg-gradient-to-tr from-sky-200 overflow-scroll">
       <BrowserRouter>
         <Header />
         <Routes>
