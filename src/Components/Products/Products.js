@@ -3,7 +3,8 @@ import { ImSpinner2, ImSad } from "react-icons/im";
 import { IoMdRefresh } from "react-icons/io";
 import ProductCard from "./ProductCard";
 
-function Products() {
+function Products(props) {
+  const { addToCart } = props;
   //state for holding the api data
   const [data, setData] = useState([]);
   //boolean state variables to signal if api is loading and if error has occurred
@@ -54,7 +55,16 @@ function Products() {
       ) : (
         <div className="grid md:grid-cols-4 grid-cols-2 gap-6 px-6 py-6">
           {data.map((item) => {
-            return <ProductCard key={item.id} image={item.image} title={item.title} price={item.price}/>;
+            return (
+              <ProductCard
+                key={item.id}
+                id={item.id}
+                image={item.image}
+                title={item.title}
+                price={item.price}
+                addToCart={addToCart}
+              />
+            );
           })}
         </div>
       )}
