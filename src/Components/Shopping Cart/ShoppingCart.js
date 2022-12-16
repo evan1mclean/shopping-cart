@@ -80,7 +80,7 @@ function ShoppingCart(props) {
                 className="py-4 w-full border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
                 onClick={() =>
                   alert(
-                    "Checking out was beyond the project scope... by pretty nice shopping cart eh?"
+                    "Checking out was beyond the project scope... but pretty nice shopping cart eh?"
                   )
                 }
               >
