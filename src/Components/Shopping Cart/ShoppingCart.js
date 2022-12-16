@@ -70,14 +70,14 @@ function ShoppingCart(props) {
             <div className="mt-auto text-lg font-bold self-start">Total: ${sumTotal()}</div>
             {shoppingCart.length === 0 ? (
               <button
-                className="py-4 w-full border border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
+                className="py-4 w-full border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
                 onClick={handleModalClick}
               >
                 Close
               </button>
             ) : (
               <button
-                className="py-4 w-full border border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
+                className="py-4 w-full border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
                 onClick={() =>
                   alert(
                     "Checking out was beyond the project scope... by pretty nice shopping cart eh?"
