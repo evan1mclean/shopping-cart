@@ -10,9 +10,8 @@ describe("Product Card", () => {
   const title = "Product title";
   const price = 9.99;
   const addToCart = jest.fn();
-  
-  describe("Rendering", () => {
 
+  describe("Rendering", () => {
     test("Correctly renders product card image", () => {
       render(
         <ProductCard
@@ -25,7 +24,7 @@ describe("Product Card", () => {
       );
       expect(screen.getByAltText(title)).toBeInTheDocument();
     });
-  
+
     test("Correctly renders the product title", () => {
       render(
         <ProductCard
@@ -37,8 +36,8 @@ describe("Product Card", () => {
         />
       );
       expect(screen.getByText(title)).toBeInTheDocument();
-    })
-  
+    });
+
     test("Correctly renders the price", () => {
       render(
         <ProductCard
@@ -50,8 +49,8 @@ describe("Product Card", () => {
         />
       );
       expect(screen.getByText("$9.99")).toBeInTheDocument();
-    })
-  
+    });
+
     test("Correctly renders add to cart button", () => {
       render(
         <ProductCard
@@ -63,11 +62,10 @@ describe("Product Card", () => {
         />
       );
       expect(screen.getByRole("button").textContent).toMatch("Add To Cart");
-    })
-  })
+    });
+  });
 
   describe("Functionality", () => {
-
     test("Calls addToCart when button is clicked", () => {
       render(
         <ProductCard
@@ -78,9 +76,9 @@ describe("Product Card", () => {
           addToCart={addToCart}
         />
       );
-      const button = screen.getByRole("button", {name: "Add To Cart"});
+      const button = screen.getByRole("button", { name: "Add To Cart" });
       userEvent.click(button);
       expect(addToCart).toHaveBeenCalled();
-    })
-  })
+    });
+  });
 });
