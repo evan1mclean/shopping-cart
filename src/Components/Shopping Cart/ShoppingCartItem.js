@@ -30,6 +30,7 @@ export default function ShoppingCartItem(props) {
             -
           </button>
           <input
+            data-testid="quantity-input"
             type="number"
             value={quantity}
             className="w-10 text-center"
