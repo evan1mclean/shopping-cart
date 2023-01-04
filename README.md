@@ -21,3 +21,36 @@ Please note that completing a purchase and checking out is beyond the scope of t
 ## Live Demo
 
 [You can view a live demo of the app here](https://evan1mclean.github.io/shopping-cart/)
+
+## Downloading and Running the Project
+
+To download and run the project locally, follow these steps:
+
+1. Clone the repository:
+```
+$ git clone https://github.com/evan1mclean/shopping-cart.git
+```
+
+2. Navigate to the project directory:
+```
+$ cd shopping-cart
+```
+
+3. Install the dependencies:
+```
+$ npm install
+```
+
+4. Start the development server:
+```
+$ npm start
+```
+
+The app will be running at http://localhost:3000/.
+
+## Running Tests
+
+To run the tests for the app, use the following command:
+```
+$ npm test
+```
