@@ -22,8 +22,8 @@ function Header(props) {
             <div className="hover:scale-110 transition duration-100">Shop</div>
           </Link>
           <div className="relative hover:scale-110 transition duration-100" onClick={handleModalClick}>
-            {sumQuantity() > 0 && <div className={`absolute ${sumQuantity() > 99 ? 'h-6 w-6' : 'h-5 w-5'} bg-red-400 rounded-full text-xs flex items-center justify-center -bottom-[5px] -left-[5px]`}>{sumQuantity() > 99 ? "99+" : sumQuantity()}</div>}
-            <button className="rounded-full bg-white text-sky-400 px-3 py-3 flex justify-center items-center">
+            {sumQuantity() > 0 && <div data-testid="shopping-cart-quantity" className={`absolute ${sumQuantity() > 99 ? 'h-6 w-6' : 'h-5 w-5'} bg-red-400 rounded-full text-xs flex items-center justify-center -bottom-[5px] -left-[5px]`}>{sumQuantity() > 99 ? "99+" : sumQuantity()}</div>}
+            <button className="rounded-full bg-white text-sky-400 px-3 py-3 flex justify-center items-center" data-testid="shopping-cart-button">
               <FaShoppingCart />
             </button>
           </div>
