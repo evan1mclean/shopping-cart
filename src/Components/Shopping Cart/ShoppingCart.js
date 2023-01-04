@@ -12,9 +12,17 @@ function ShoppingCart(props) {
   } = props;
 
   const sumTotal = () => {
-    return shoppingCart.reduce((total, item) => {
-      return total + item.price * item.quantity;
-    }, 0).toFixed(2);
+    return shoppingCart
+      .reduce((total, item) => {
+        return total + item.price * item.quantity;
+      }, 0)
+      .toFixed(2);
+  };
+
+  const checkout = () => {
+    alert(
+      "Checking out was beyond the project scope... but pretty nice shopping cart eh?"
+    );
   };
 
   return (
@@ -23,11 +31,12 @@ function ShoppingCart(props) {
         <>
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
+            animate={{ opacity: 1}}
             exit={{ opacity: 0 }}
             transition={{ ease: "easeInOut", duration: 0.5 }}
             className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70"
             onClick={handleModalClick}
+            data-testid="modal-background"
           />
           <motion.div
             className="md:w-[450px] w-96 bg-white h-full ml-auto fixed right-0 pt-16 pb-8 px-16 flex flex-col items-center gap-8"
@@ -46,7 +55,9 @@ function ShoppingCart(props) {
             <h1 className="text-3xl">Your Shopping Cart</h1>
 
             {shoppingCart.length === 0 ? (
-              <div className="mt-16">Your cart is empty</div>
+              <div className="mt-16" data-testid="empty-message">
+                Your cart is empty
+              </div>
             ) : (
               <div className="w-full flex flex-col gap-8 overflow-scroll">
                 {shoppingCart.map((item) => {
@@ -67,22 +78,25 @@ function ShoppingCart(props) {
               </div>
             )}
 
-            <div className="mt-auto text-lg font-bold self-start">Total: ${sumTotal()}</div>
+            <div
+              className="mt-auto text-lg font-bold self-start"
+              data-testid="cart-total"
+            >
+              Total: ${sumTotal()}
+            </div>
             {shoppingCart.length === 0 ? (
               <button
                 className="py-4 w-full border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
                 onClick={handleModalClick}
+                data-testid="close-button"
               >
                 Close
               </button>
             ) : (
               <button
                 className="py-4 w-full border-2 border-slate-700 hover:bg-slate-100 hover:transition-all duration-300 active:bg-slate-400"
-                onClick={() =>
-                  alert(
-                    "Checking out was beyond the project scope... but pretty nice shopping cart eh?"
-                  )
-                }
+                onClick={checkout}
+                data-testid="checkout-button"
               >
                 Checkout
               </button>
