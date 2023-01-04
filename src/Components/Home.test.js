@@ -1,8 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
-import Home from "./Components/Home";
-import { BrowserRouter, renderMatches } from "react-router-dom";
+import Home from "./Home";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Home", () => {
   test("Renders home page", () => {
