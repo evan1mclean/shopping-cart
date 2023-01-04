@@ -60,7 +60,7 @@ function App() {
 
   return (
     <div className="App h-screen flex flex-col bg-gradient-to-tr from-sky-200 overflow-scroll">
-      <BrowserRouter>
+      <BrowserRouter basename="/shopping-cart">
         <Header handleModalClick={handleModalClick} shoppingCart={shoppingCart}/>
         <Routes>
           <Route path="/" element={<Home />} />
