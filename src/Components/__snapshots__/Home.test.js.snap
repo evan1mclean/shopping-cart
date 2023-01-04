@@ -1,56 +1,47 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Home Renders home page 1`] = `
-Object {
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "logTestingPlaygroundURL": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-}
+<div>
+  <div
+    class="grow flex lg:justify-between lg:items-center md:items-center w-full lg:px-24 px-10 py-10"
+  >
+    <div
+      class="lg:h-96 lg:w-1/2 flex flex-col lg:justify-between md:justify-between gap-7"
+    >
+      <h1
+        class="lg:text-5xl md:text-5xl text-3xl font-bold lg:text-left text-center"
+        data-testid="home-header"
+      >
+        Welcome To The Big Fake Online Storefront
+      </h1>
+      <p
+        class="text-lg"
+        data-testid="store-description"
+      >
+        Generic slogan for all your fake shopping needs... blah blah.. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis amet, consectetur adipiscing elit
+      </p>
+      <div
+        class="text-center lg:text-left"
+      >
+        <a
+          href="/products"
+        >
+          <button
+            class="bg-sky-400 text-white text-lg py-2 px-4 rounded-3xl hover:scale-110 transition duration-100"
+            data-testid="shop-now-button"
+          >
+            Shop Now
+          </button>
+        </a>
+      </div>
+    </div>
+    <div>
+      <img
+        alt="Online Shopping"
+        class="lg:h-96 lg:w-auto rounded-lg h-0 w-0"
+        src="shopping.jpg"
+      />
+    </div>
+  </div>
+</div>
 `;

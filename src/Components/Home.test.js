@@ -6,22 +6,22 @@ import { BrowserRouter } from "react-router-dom";
 
 describe("Home", () => {
   test("Renders home page", () => {
-    render(<Home />, {wrapper: BrowserRouter})
-    expect(screen).toMatchSnapshot();
-  })
+    const { container } = render(<Home />, { wrapper: BrowserRouter });
+    expect(container).toMatchSnapshot();
+  });
 
   test("Renders home page header", () => {
-    render(<Home />, {wrapper: BrowserRouter})
+    render(<Home />, { wrapper: BrowserRouter });
     expect(screen.getByTestId("home-header")).toBeInTheDocument();
-  })
+  });
 
   test("Renders store description", () => {
-    render(<Home />, {wrapper: BrowserRouter})
+    render(<Home />, { wrapper: BrowserRouter });
     expect(screen.getByTestId("store-description")).toBeInTheDocument();
-  })
+  });
 
   test("Renders shop now button", () => {
-    render(<Home />, {wrapper: BrowserRouter})
+    render(<Home />, { wrapper: BrowserRouter });
     expect(screen.getByTestId("shop-now-button")).toBeInTheDocument();
-  })
-})
+  });
+});
