@@ -2,6 +2,8 @@
 
 This is a simple application that allows users to browse and add items to their shopping cart. The app was built using React, and makes use of the [Fake Store API](https://fakestoreapi.com/) to generate a list of items for the user to browse.
 
+The major learning outcomes of this project were to incorporate unit testing of React components using React Testing Library, and to use routing in a React application. By using routing, the project ensured that the app can display different pages or components based on the URL path. By writing and running tests for the application, the project ensured that the app functions as expected and any bugs or issues are caught early in the development process.
+
 Please note that completing a purchase and checking out is beyond the scope of this project. The focus was on creating a functioning shopping cart and adding items to it.
 
 ## Features
